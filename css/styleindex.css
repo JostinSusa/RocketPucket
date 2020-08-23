@@ -1,0 +1,361 @@
+@font-face{
+  font-family: 'Futura';
+  src: url('../fonts/Futura.ttc');
+}
+@font-face{
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Medium.ttf');
+}
+.btn-intro{
+    width: auto;
+    height: auto;
+
+}
+html{
+  scroll-behavior: smooth;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+  header img{
+    filter: invert(100%);
+    width: 400px;
+    transform: scale(0);
+    transition: 1500ms;
+  }
+  header video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    z-index: -1;
+  }
+
+  nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffd800;
+    padding: 10px 15px;
+    min-height: 10vh;
+  }
+  .sticky {
+    position:fixed;
+    z-index:1000;
+    top:0;
+    width:100%;
+    box-shadow:0px 4px 3px rgba(0,0,0,.5);
+  }
+  nav a img{
+    width: 80px;
+  }
+  nav .menuToggle{
+    display: none;
+    font-size: 30px;
+    padding: 10px;
+  }
+  nav .menuToggle:hover{
+    cursor: pointer;
+    background: #f0cc00;
+  }
+  nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: cente;
+    list-style: none;
+    width: 500px;
+  }
+  nav ul li a{
+    padding: 10px 15px;
+    color: #000;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 100;
+    z-index: 1;
+    position: relative;
+  }
+  nav ul li a::before{
+    content: '';
+    display: block;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f0cc00;
+    z-index: -1;
+    transition: 300ms;
+  }
+  nav ul li a:hover::before{
+    width: 100%;
+    transition: 300ms;
+  }
+  .intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+    background: #ffd800;
+    position: relative;
+  }
+  .intro img{
+    width: 400px;
+    filter: brightness(0);
+
+  }
+  .intro a{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.932);
+  }
+  .intro a i{
+    font-size: 30px;
+
+  }
+  .contenedor_somos{
+    width: 50%;
+    max-width: 100%;
+    margin: 0px;
+
+  }
+  
+  .btn-contact{
+    margin-top: 800px;
+    background: #2C2C2C;
+  }
+
+  .contenedor_contacto{
+    width: 50%;
+    max-width: 100%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  form{
+    width: 100%;
+    margin: 20px 0;
+    padding: 20px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 3px grey;
+    border: 1px solid #000;
+    border-top: 4px solid #000;
+  }
+  form h1{
+    font-family: 'Montserrat';
+    margin-top: 20px;
+    margin-left: 280px;
+  }
+  form p{ 
+    font-family: 'Montserrat';
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 300px;;
+  }
+  div .rectangle{
+  position: absolute;
+  width: 300px;
+  height: 319px;
+  left: 300px;
+  background: rgba(255, 125, 4, 0.14);
+  mix-blend-mode: normal;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  div .rectangle2{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 125, 4, 0.14);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }    
+
+  form img{
+  position: absolute;
+  width: 300px;
+  height: 319px;
+  left: 300px;
+  }
+  form input[type="text"],
+  form input[type="email"],
+  form textarea{
+    border: 1px solid #000;
+    border-radius: 2px;
+    padding: 16px;
+    width: 50%;
+    left: 300px;
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+    font-family: 'Montserrat';
+      font-size: 1em;
+  }
+  
+  form input[type="text"]:focus,
+  form input[type="email"]:focus,
+  form textarea:focus{
+    border: 2px solid #000;
+    padding: 15px;
+  }
+  
+  form textarea{
+    max-width: 50%;
+    min-width: 50%;
+    max-height: 300px;
+    min-height: 150px;
+  }
+  
+  .alert{
+    padding: 1em;
+    color: #fff;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  
+  .alert.error{
+    background: #F2DEDE;
+    border: 1px solid #a94442;
+    color: #a94442;
+  }
+  
+  .alert.success{
+    background: #4CAF50;
+  }
+  
+  .btn,
+  form input[type="submit"]{
+    padding: 15px;
+    background: #D5AC4E;
+    color: #E1E9FA;
+    font-size: 1em;
+    border-radius: 2px;
+    border: none;
+    margin: 0 420px;
+    cursor: pointer;
+    font-family: 'Montserrat';
+  }
+  
+  form input[type="submit"]:hover{
+    background: #80181b;
+  }
+  footer{
+    height: 300px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  footer .img1{
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+  }
+  footer .img2{
+    width: 267px;
+  }
+  footer h4{
+    font-size: 1.5em;
+    padding-top: 10px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Futura';
+    position: sticky;
+  }
+  div .rectangle h2{
+    font-family: 'Montserrat';
+    text-align: center;
+    font-weight: bold;
+    padding-top: 30px;
+  }
+  div .rectangle h3{
+    font-family: 'Montserrat';
+    text-align: center;
+    padding-top: 10px;
+    font-weight: bold;
+    padding-top: 30px;
+  }
+  div .rectangle i{
+    text-align: center;
+    margin-left: 70px;
+    padding-top: 20px;
+    font-size: 2em;
+    position: absolute;
+  }
+  div .rectangle p{
+    font-family: 'Montserrat';
+    margin: 0px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 30px;
+  }
+
+  div .rectangle2 a{
+    font-family: 'Montserrat';
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    margin: auto;
+    font-weight: bold ;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+  }
+  @media screen and (max-width:670px){
+    nav{
+      flex-wrap: wrap;
+    }
+    nav .menuToggle{
+      display: block;
+    }
+    nav ul{
+      flex-direction: column;
+      width: 100%;
+      display: none;
+    }
+    nav ul li a{
+      display: block;
+      text-align: center;
+
+    }
+
+  }
+  @media screen and (max-width:450px){
+    header img{
+      width: 300px;
+    }
+    .intro img{
+      width: 300px;
+    }
+  }
